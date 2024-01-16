@@ -1,2 +1,26 @@
-# DataEngineering_Zoomcamp
-I participate in the Datatalk.club 10 weeks Data Engineering Class starting from 16th of Jnauary 2023, all my learning resources and project will be commited to this repository. I hope to learn more and get to Experience Data Engineering fully
+# Data Enginerring Zoom Camp 2024 🚀
+Welcome to my Data Engineering journey! This repository documents my daily progress as I delve into the world of Data Engineering through the Zoomcamp 2024 course. The journey began on January 15th, 2024, and I am determined to dedicate 2 hours daily to ensure a comprehensive understanding of the course content
+
+## OVerview
+![Data Engineering](https://github.com/1e88eaef-014c-4a73-aa3f-0ff32406486b)
+
+### Background 📖
+Initiating the course in 2023, challenges accessing Google Cloud Computing services hindered my progress. However, 2024 presents a new opportunity, and I am determined to overcome obstacles and complete the program. This repository serves as a daily log of my learning, encompassing tools, concepts, and hands-on exercises.
+
+## Daily Log 📆
+
+### Day 1: 16th January 2024
+
+- **Progress:**
+  - Started the course afresh, building on previous knowledge.
+  - Explored various terms and tools related to Data Engineering.
+  
+- **Goals for Tomorrow:**
+  - Dive deeper into specific tools covered in the course.
+  - Begin hands-on exercises to reinforce theoretical understanding.
+
+This journey promises to be exciting as I navigate through different tools and concepts in Data Engineering. Cheers to continuous learning and growth! 🌱
+
+
+
+(Note: The image provided via the URL is not displayed here due to technical limitations. Please check the URL directly for the image.)
