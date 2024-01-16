@@ -1,0 +1,4 @@
+ny_taxi_postgres_data/
+*.gz
+yellow_tripdata_2021-01/
+*.csv
