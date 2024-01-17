@@ -14,10 +14,12 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
 - **Progress:**
   - Started the course afresh, building on previous knowledge.
   - Explored various terms and tools related to Data Engineering.
+
+### Day 2: 17th January 2024
   
-- **Goals for Tomorrow:**
-  - Dive deeper into specific tools covered in the course.
-  - Begin hands-on exercises to reinforce theoretical understanding.
+- **Progress:**
+  - Started a postgres docker container, use pgcli to access my database in the command line.
+  - ingest data to the database using python, while connecting to the database that was running in docker.
 
 This journey promises to be exciting as I navigate through different tools and concepts in Data Engineering. Cheers to continuous learning and growth! 🌱
 
