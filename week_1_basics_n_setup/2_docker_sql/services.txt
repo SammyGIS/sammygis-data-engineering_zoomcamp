@@ -32,7 +32,10 @@ services:
     -p 5431:5432 \
     postgres:13 
 
-    To run pgadmin in docker
+  # login to your running database using pgcli
+  pgcli -h localhost -p 5431 -u root -d ny_taxi
+  
+  To run pgadmin in docker
 
     docker run -it \
       -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
