@@ -34,7 +34,12 @@ services:
 
   # login to your running database using pgcli
   pgcli -h localhost -p 5431 -u root -d ny_taxi
-  
+
+  some command line to read csv file
+  head -n 100 $filename.csv
+  less $filename.csv
+  wc -l $filename.csv count line
+   
   To run pgadmin in docker
 
     docker run -it \
@@ -70,7 +75,7 @@ URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yell
 URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-01.csv.gz"
 
 python ingest_data.py \
-  --user=root \
+  --user=root \ 
   --password=root \
   --host=localhost \
   --port=5432 \
