@@ -1,0 +1,6 @@
+export GOOGLE_CREDENTIAL=''
+eacho $GOOGLE_CREDENTIAL 
+
+terraform tmt for formating
+
+terraform init
