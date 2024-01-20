@@ -118,3 +118,29 @@ taxi_ingest:v001 \
   --db=ny_taxi \
   --table_name=yellow_taxi_trips \
   --url=${URL}
+
+
+  Connecting to google cloud vm
+  go to the documentation
+  https://cloud.google.com/compute/docs/connect/create-ssh-keys#linux-and-macos
+  using ssh
+  $ ssh-keygen -t rsa -f ~/.ssh/gcp -C sammygis -b 2048
+
+  Run the Container
+
+  I will be runign thsi suisng the docker compose, all i need to do is to
+  check the netowrk the compose   is runing on and the name of the host it automatically created
+  athen add it to this cript so that once i run docker compose eeryhting is filename
+docker run -it \
+--network=2_docker_sql_pg-network  \
+ingest:v1 \
+  --user=root \
+  --password=root \
+  --host=2_docker_sql-pgdatabase-1 \
+  --port=5432 \
+  --db=ny_taxi \
+  --table_name=yellow_taxi_trips \
+  --url=${URL}
+
+
+pgcli -h 2_docker_sql-pgdatabase-1 -p 5431 -u root -d ny_taxi
