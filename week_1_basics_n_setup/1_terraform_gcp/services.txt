@@ -2,5 +2,8 @@ export GOOGLE_CREDENTIAL=''
 eacho $GOOGLE_CREDENTIAL 
 
 terraform tmt for formating
-
+terraform plan allows you to go through the plan before deploy it
+terraform apply to create the infrastructure
 terraform init
+terraform destroy to delete the infrastucture created
+
