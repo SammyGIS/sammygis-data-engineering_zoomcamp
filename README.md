@@ -33,6 +33,17 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
 - Setting up google cloud video will be watched but i wont set it up untill,  strated using it
 - Learn about Terraform
 
+### Day 4: 19th January 2024
+- **Progress:**
+- Run through the sql refresher course, by running some sql queriers inpgadmin to query some data
+- Setting up google cloud video will be watched but i wont set it up untill,  strated using it
+- Learn about Terraform
+
+### Day 4: 20th January 2024
+- **Progress:**
+- watched the terraform video, learn ablot on terrafrom, create a gcs bucket and destroy it
+- 
+
 
 This journey promises to be exciting as I navigate through different tools and concepts in Data Engineering. Cheers to continuous learning and growth! 🌱
 
