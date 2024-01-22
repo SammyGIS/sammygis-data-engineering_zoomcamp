@@ -1,3 +1,13 @@
+variable "project"{
+    description ="Project"
+    default = "US"
+}
+
+variable "region"{
+    description ="Region"
+    default = "us-central1"
+}
+
 variable "location"{
     description ="Project location"
     default = "US"
