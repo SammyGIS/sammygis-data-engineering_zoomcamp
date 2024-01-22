@@ -1,3 +1,8 @@
+variable "credentials"{
+    description ="My Credentials"
+    default = "./keys/my-cred.json"
+    }
+
 variable "project"{
     description ="Project"
     default = "US"
