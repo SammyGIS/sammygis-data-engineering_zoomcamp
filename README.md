@@ -42,7 +42,18 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
 ### Day 4: 20th January 2024
 - **Progress:**
 - watched the terraform video, learn ablot on terrafrom, create a gcs bucket and destroy it
-- 
+
+### Day 5: 21th January 2024
+- **Progress:**
+- was pretty occupied so i took a rest to reminisce on my journey so far and read some articles online - - read what people have done so far 
+
+### Day 6: 22th January 2024
+- **Progress:**
+- learning about terrafrom variable, and working with
+- learn introduction to mage, clone magezoomcamp repo online
+- learn how to configure mage using docker
+- followed up the crating simple pipeline mage video and followed everything step by step
+
 
 
 This journey promises to be exciting as I navigate through different tools and concepts in Data Engineering. Cheers to continuous learning and growth! 🌱
