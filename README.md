@@ -60,6 +60,18 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
 - continue with mage connect merge to postgres, creating a postgress data load with sql (creating new pipeline)
 - Building ETL API poipleine and storing it on postgress using mage 
 
+### Day 8: 24th January 2024
+- **Progress:**
+- setup mage using docker compose, understand mage ui and also understand
+- continue with mage connect merge to postgres, creating a postgress data load with sql (creating new pipeline)
+- Building ETL API poipleine and storing it on postgress using mage 
+
+### Day 9: 25th January 2024
+- **Progress:**
+- setup mage using docker compose, understand mage ui and also understand
+- continue with mage connect merge to postgres, creating a postgress data load with sql (creating new pipeline)
+- Building ETL API poipleine and storing it on postgress using mage 
+
 
 
 

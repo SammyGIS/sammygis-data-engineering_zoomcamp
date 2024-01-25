@@ -72,7 +72,7 @@ docker network create pg-network
  
 URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
 
-URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-01.csv.gz"
+URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-09.csv.gz"
 
 python ingest_data.py \
   --user=root \ 
@@ -83,7 +83,7 @@ python ingest_data.py \
   --table_name=yellow_taxi_trips \
   --url=${URL}
 
-  python green_taxi_ingest_data.py \
+  python ingest_green_taxi_data.py \
   --user=root \
   --password=root \
   --host=localhost \
@@ -104,7 +104,7 @@ taxi_ingest:v001 \
   --host=pg-database \
   --port=5432 \
   --db=ny_taxi \
-  --table_name=yellow_taxi_trips \
+  --table_name=yellow_cab_trips \
   --url=${URL}
 
 Start the container Container
@@ -131,6 +131,8 @@ taxi_ingest:v001 \
   I will be runign thsi suisng the docker compose, all i need to do is to
   check the netowrk the compose   is runing on and the name of the host it automatically created
   athen add it to this cript so that once i run docker compose eeryhting is filename
+
+URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
 docker run -it \
 --network=2_docker_sql_pg-network  \
 ingest:v1 \
@@ -139,8 +141,21 @@ ingest:v1 \
   --host=2_docker_sql-pgdatabase-1 \
   --port=5432 \
   --db=ny_taxi \
-  --table_name=yellow_taxi_trips \
+  --table_name=yellow_cab_trips \
   --url=${URL}
 
 
 pgcli -h 2_docker_sql-pgdatabase-1 -p 5431 -u root -d ny_taxi
+
+URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-09.csv.gz"
+
+docker run -it \
+--network=2_docker_sql_default  \
+ingest:green_taxi_data \
+  --user=root \
+  --password=root \
+  --host=172.25.0.3\
+  --port=5431 \
+  --db=ny_taxi \
+  --table_name=green_taxi_trips \
+  --url=${URL}
