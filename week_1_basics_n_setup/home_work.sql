@@ -93,6 +93,7 @@ WHERE     zones."Zone" = 'Astoria' AND
 GROUP BY     zones."Zone", taxi_data."DOLocationID", drop_off_zone."Zone"
 ORDER BY     sum_tip_amount DESC;
 
+   
 
 
 
