@@ -60,7 +60,8 @@ GROUP BY pickup,
 SELECT COUNT(*), lpep_pickup_datetime::DATE AS pickup, MAX(trip_distance) AS max_trip_distance
 FROM public.green_taxi_Data
 GROUP BY pickup
-ORDER BY MAX(trip_distance) DESC;
+ORDER BY MAX(trip_distance) DESC
+LIMIT 1;
 
 -- Consider lpep_pickup_datetime in '2019-09-18' and ignoring Borough has Unknown
 -- Which were the 3 pick up Boroughs that had a sum of total_amount superior to 50000?
