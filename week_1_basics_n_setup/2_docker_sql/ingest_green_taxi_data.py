@@ -33,7 +33,7 @@ def main(params):
     engine = create_engine(f'postgresql://{user}:{password}@{host}:{port}/{db}')
 
     df_iter = pd.read_csv(csv_name, iterator=True, chunksize=100000,  
-                          compression='gz')
+                          compression='gzip')
 
     df = next(df_iter)
 
