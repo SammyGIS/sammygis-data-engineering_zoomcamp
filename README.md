@@ -73,6 +73,20 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
 - Building ETL API poipleine and storing it on postgress using mage 
 
 
+### Day 10: 26th January 2024
+- **Progress:**
+- Do week 1 assignment for both terrarom and sql then submit it
+
+******************************* I had to take this break to find a way to set up my own GCP before continuing with the course***************************************
+
+### Day 11: 1st Febrauary, 2024
+- **Progress:**
+- Finally set up GCP account.
+- continue with mage connect merge to postgres, creating a postgress data load with sql (creating new pipeline)
+- Building ETL API poipleine and storing it on postgress using mage 
+
+
+
 
 
 This journey promises to be exciting as I navigate through different tools and concepts in Data Engineering. Cheers to continuous learning and growth! 🌱
