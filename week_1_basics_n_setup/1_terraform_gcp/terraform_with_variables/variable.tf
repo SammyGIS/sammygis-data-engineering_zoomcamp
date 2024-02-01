@@ -1,6 +1,6 @@
 variable "credentials"{
     description ="My Credentials"
-    default = "./keys/data-enginerring-zoomcamp-2bb13d6571df.json"
+    default = ""
     }
 
 variable "project"{
@@ -19,11 +19,11 @@ variable "location"{
 }
 variable "bq_dataset_name"{
     description ="My BigQuery Dataset Name"
-    default = "demo_dataset"
+    default = "demo_dataset_sammygis"
 }
 variable "gcs_storage_name"{
     description ="My storage bucket name"
-    default = "demo_storage"
+    default = "demo_storage_sammygis"
 }
 
 variable "gcs_storage_class"{
