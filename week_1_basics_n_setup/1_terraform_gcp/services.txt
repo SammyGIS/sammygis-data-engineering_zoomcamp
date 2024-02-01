@@ -1,6 +1,5 @@
-export GOOGLE_CREDENTIAL='/keys/data-enginerring-zoomcamp-2bb13d6571df.json'
-echo $GOOGLE_CREDENTIAL 
-
+export GOOGLE_CREDENTIAL='./keys/data-enginerring-zoomcamp-2bb13d6571df.json'
+echo $GOOGLE_CREDENTIAL
 terraform fmt for formating
 terraform plan allows you to go through the plan before deploy it
 terraform apply to create the infrastructure
