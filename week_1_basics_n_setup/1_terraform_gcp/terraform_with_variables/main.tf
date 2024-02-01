@@ -10,18 +10,18 @@ terraform {
 provider "google" {
   # Credentials only needs to be set if you do not have the GOOGLE_APPLICATION_CREDENTIALS set
   #  credentials = 
-  project = "data-enginerring-zoomcamp"
-  region  = "us-central1"
+  project = var.project
+  region  = var.region
 }
 
 
 
 resource "google_storage_bucket" "data-lake-bucket" {
-  name     = "zoomcamp-datalake2024"
-  location = "US"
+  name     = var.gcs_storage_name
+  location = var.location
 
   # Optional, but recommended settings:
-  storage_class               = "STANDARD"
+  storage_class               = var.gcs_storage_class
   uniform_bucket_level_access = true
 
   versioning {
@@ -42,7 +42,7 @@ resource "google_storage_bucket" "data-lake-bucket" {
 
 
 resource "google_bigquery_dataset" "dataset" {
-  dataset_id = "my_first_dataset"
-  project    = "data-enginerring-zoomcamp"
-  location   = "US"
+  dataset_id = var.bq_dataset_name
+  project    = var.project
+  location   = var.location
 }
