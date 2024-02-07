@@ -85,6 +85,10 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
 - since have access to GCP now, I then praticed what i learnt on terraform, create bucket and big query dataset then destroy it
 
 
+### Day 11: 6th Febrauary, 2024
+- **Progress:**
+- Finally set up GCP account.
+- since have access to GCP now, I then praticed what i learnt on terraform, create bucket and big query dataset then destroy it
 
 
 
