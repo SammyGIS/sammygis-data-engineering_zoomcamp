@@ -85,11 +85,15 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
 - since have access to GCP now, I then praticed what i learnt on terraform, create bucket and big query dataset then destroy it
 
 
-### Day 11: 6th Febrauary, 2024
+### Day 12: 6th Febrauary, 2024
 - **Progress:**
-- Finally set up GCP account.
-- since have access to GCP now, I then praticed what i learnt on terraform, create bucket and big query dataset then destroy it
+- Setting up image and loading data to the google cloud
+- created serivece account for mage where i gave access to cloud storage and bigquery
+- created new bucket, load the parque format of my file to gcs
 
+### Day 13: 7th Febrauary, 2024
+- **Progress:**
+- Upload parttioned parquet file to gcs
 
 
 This journey promises to be exciting as I navigate through different tools and concepts in Data Engineering. Cheers to continuous learning and growth! 🌱
