@@ -104,8 +104,9 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
 - solve the home week for week 2, which i had written the ocde but coudnlt run because of the run time issue.
 - work on starting a terraform template for starting mage in GCP
 - the following servies was added to the service account,bigquery admin, storage admin, artifact read and writer, cloud developer run, all this are added to the service account that will be used to run the tamplate after the json key has been downloaded
-l
-
+-  start week 3, run into big query, learnt  about external tables, partitioning, and cluster in bigquery
+- learnt about the big query interanl on how it works the staging within the big query.
+- Learn about machine learning in big query
 
 This journey promises to be exciting as I navigate through different tools and concepts in Data Engineering. Cheers to continuous learning and growth! 🌱
 
