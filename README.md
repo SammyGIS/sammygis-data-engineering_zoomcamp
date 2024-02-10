@@ -88,12 +88,23 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
 ### Day 12: 6th Febrauary, 2024
 - **Progress:**
 - Setting up image and loading data to the google cloud
-- created serivece account for mage where i gave access to cloud storage and bigquery
+- created service account for mage where i gave access to cloud storage and bigquery
 - created new bucket, load the parque format of my file to gcs
 
 ### Day 13: 7th Febrauary, 2024
 - **Progress:**
-- Upload parttioned parquet file to gcs
+- Upload parttioned parquet file to gcs wokered, wrote code to upload the data to bigquery but my code was not running
+
+### Day 14: 9th Febrauary, 2024
+- **Progress:**
+- solve the runining non-stop issue by clearing the output and restarting the kenel in the edit tool, had to read a lot of issue before i could stop this
+
+### Day 15: 10th Febrauary, 2024
+- **Progress:**
+- solve the home week for week 2, which i had written the ocde but coudnlt run because of the run time issue.
+- work on starting a terraform template for starting mage in GCP
+- the following servies was added to the service account,bigquery admin, storage admin, artifact read and writer, cloud developer run, all this are added to the service account that will be used to run the tamplate after the json key has been downloaded
+l
 
 
 This journey promises to be exciting as I navigate through different tools and concepts in Data Engineering. Cheers to continuous learning and growth! 🌱
