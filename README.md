@@ -108,6 +108,9 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
 - learnt about the big query interanl on how it works the staging within the big query.
 - Learn about machine learning in big query
 
+### Day 16: 11th Febrauary, 2024
+- **Progress:**
+
 This journey promises to be exciting as I navigate through different tools and concepts in Data Engineering. Cheers to continuous learning and growth! 🌱
 
 
