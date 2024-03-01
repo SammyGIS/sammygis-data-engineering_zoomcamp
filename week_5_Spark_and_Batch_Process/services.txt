@@ -1,0 +1,75 @@
+To create a VM instance using SSH key, follow these steps in Git Bash on your Linux machine:
+
+1. Navigate to your home directory and create an SSH directory or use `cd ~/.ssh/` to access the existing directory.
+
+2. Generate a Google Cloud Platform (GCP) SSH key by following the instructions at [this link](https://cloud.google.com/compute/docs/connect/create-ssh-keys).
+
+3. Go to the "Metadata" section under "Settings" in the Compute Engine and add the SSH key.
+
+4. Create the VM instance named "a".
+
+5. Then, switch to your local Bash and connect to the system using the following command:
+
+```bash
+ssh -i ~/.ssh/gcp sammygis@35.194.88.53
+```
+
+Replace `35.194.88.53` with the external IP address of your VM.
+
+6. Install Anaconda on the VM.
+
+7. Create an easy activation config file that enables SSH access.
+
+8. Update Linux:
+```bash
+sudo apt-get update
+```
+
+9. Install Docker:
+```bash
+sudo apt install docker.io
+sudo groupadd docker
+sudo gpasswd -a $USER docker
+sudo service docker restart
+```
+
+10. Use `Ctrl + D` to log out of the VM or to refresh or source `.bashrc`.
+
+11. Configure VS Code to access the remote machine using Remote SSH.
+
+12. Install Spark on the VM:
+   - Create a Spark folder.
+   - Download Java from [this link](https://download.java.net/java/GA/jdk11/13/GPL/openjdk-11.0.1_linux-x64_bin.tar.gz).
+   - Install Java:
+   ```bash
+   export JAVA_HOME="${HOME}/spark/jdk-11.0.1"
+   export PATH="${JAVA_HOME}/bin:${PATH}"
+   ```
+   - Install Spark:
+   ```bash
+   export SPARK_HOME="${HOME}/spark/spark-3.0.3-bin-hadoop3.2"
+   export PATH="${SPARK_HOME}/bin:${PATH}"
+   ```
+   - Check if Spark is working after installation by running:
+   ```bash
+   spark-shell
+   ```
+
+13. Add all these export variables to your `.bashrc` file to automate this process every time you start the VM:
+
+```bash
+export JAVA_HOME="${HOME}/spark/jdk-11.0.1"
+export PATH="${JAVA_HOME}/bin:${PATH}"
+export SPARK_HOME="${HOME}/spark/spark-3.0.3-bin-hadoop3.2"
+export PATH="${SPARK_HOME}/bin:${PATH}"
+export PYTHONPATH="${SPARK_HOME}/python/:$PYTHONPATH"
+export PYTHONPATH="${SPARK_HOME}/python/lib/py4j-0.10.9-src.zip:$PYTHONPATH"
+```
+
+14. If needed, remove the SSH key for the VM with the command:
+
+```bash
+ssh-keygen -R 35.245.25.41
+```
+
+These steps should help you create a VM instance and set it up for your tasks. Let me know if you need further assistance!
