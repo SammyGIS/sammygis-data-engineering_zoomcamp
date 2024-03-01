@@ -120,8 +120,19 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
 - Hands on machine learning problem in bigquery using the ML model inbuilt
 - Get intorduced to week four topics on introduction to dbt 
 
-This journey promises to be exciting as I navigate through different tools and concepts in Data Engineering. Cheers to continuous learning and growth! 🌱
+
+### Day 19 to 28th: Day 15th to 28th Febrauary, 2024
+- **Progress:**
+- Learnt dbt cloud and create resipotory in github and connect it to dbt cloud, connect it to bigquery 
+- Learn about dbt model, dbt snapshot, dbt seed, dbt macro, learn about packages and variables
+dbt seed : this sis where data like csv is saved
+- Setting up dbt yaml project
+- Learn about different type of materialised table: table, view, incremental tables 
+- Create staging data for yellow and green taxi data
+- Create dbt test to test the data, there are two type of test generic and 
+- 
 
 
+This journey promises to be exciting as I navigate through different tools and concepts in Data Engineering. Cheers to continuous learning and growth!
 
-(Note: The image provided via the URL is not displayed here due to technical limitations. Please check the URL directly for the image.)
+ 🌱

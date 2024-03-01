@@ -1,0 +1,56 @@
+ Creating VM isntance using sshs key
+ we will use instruction for linux in gitbash
+
+
+Go to your pc home and create an ssh  directory or use cd .ssh/ to open the created directory
+
+gcreate gcp ssh key
+https://cloud.google.com/compute/docs/connect/create-ssh-keys
+
+then go to metadata under seeting in compute engine and add the sshskey
+
+then create the Vm machine
+
+create the vm a
+
+the  go to local bash change to the menu the connect to the system by uisng the folowing command
+
+ssh -i ~/.ssh/gcp.pub sammygis@35.194.88.53 external ip address of the VM
+
+Install Anaconda on the WM
+Create an easy activation config file that you can ssh into
+
+Update linux - sudo apt-get update
+Install docker - sudo apt install docker.io
+sudo groupadd docker
+sudo gpasswd -a$USER docker
+sudo service docker restart
+
+control D - this is used to logout of a VM to resphras or fo source .bashrc
+Confure VS code to have access to the remote machine using remote ssh
+conect to new host, out runnign ot the de-zoomcamp
+
+Install Spark on The VM
+create spark folder
+download https://download.java.net/java/GA/jdk11/13/GPL/openjdk-11.0.1_linux-x64_bin.tar.gz
+
+install java
+export JAVA_HOME="${HOME}/spark/jdk-11.0.1"
+ export PATH="${JAVA_HOME}/bin:${PATH}"
+
+install spark
+
+export SPARK_HOME="${HOME}/spark/spark-3.0.3-bin-hadoop3.2"
+export PATH="${SPARK_HOME}/bin:${PATH}"
+
+spark-shell to check if spark is wroing after installation
+
+put all those export variable in your .bashrc file so that it automate this process once we start the vm
+
+
+export JAVA_HOME="${HOME}/spark/jdk-11.0.1"
+export PATH="${JAVA_HOME}/bin:${PATH}"
+export SPARK_HOME="${HOME}/spark/spark-3.0.3-bin-hadoop3.2"
+export PATH="${SPARK_HOME}/bin:${PATH}"
+
+ssh-keygen -R35.245.25.41
