@@ -121,18 +121,60 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
 - Get intorduced to week four topics on introduction to dbt 
 
 
-### Day 19 to 28th: Day 15th to 28th Febrauary, 2024
+### Day ....: Day 15th to 28th Febrauary, 2024
 - **Progress:**
 - Learnt dbt cloud and create resipotory in github and connect it to dbt cloud, connect it to bigquery 
-- Learn about dbt model, dbt snapshot, dbt seed, dbt macro, learn about packages and variables
-dbt seed : this sis where data like csv is saved
+- Learn about dbt model, dbt snapshot, dbt seed, dbt macro, learn about packages and variables 
+- dbt seed : this is where data like csv is saved, data that does not change easily
 - Setting up dbt yaml project
 - Learn about different type of materialised table: table, view, incremental tables 
 - Create staging data for yellow and green taxi data
 - Create dbt test to test the data, there are two type of test generic and 
-- 
+- dbt testing and documenation, all set in the yellow shcema.yml file
 
+## Day 19
+-  Creating VM isntance using sshs key gcreate gcp ssh key https://cloud.google.com/compute/docs/connect/create-ssh-keys
+    we will use instruction for linux in gitbash
+- Go to your pc home and create an ssh  directory or use cd .ssh/ to open the created directory
+- then go to metadata under seeting in compute engine and add the sshskey, after this then create the Vm machine
+- then go to local bash change to the pc home using (~), then connect to the system by uisng the folowing command
+- ssh -i ~/.ssh/gcpb sammygis@35.194.88.53 (external ip address of the VM)
+- Install Anaconda on the WM
+- Create an easy activation config file that you can ssh into
+- Update linux - sudo apt-get update
+- Install docker - sudo apt install docker.io
+    sudo groupadd docker
+    sudo gpasswd -a$USER docker
+    sudo service docker restart
 
-This journey promises to be exciting as I navigate through different tools and concepts in Data Engineering. Cheers to continuous learning and growth!
+    control D - this is used to logout of a VM to resphras or fo source .bashrc
+    Configure VS code to have access to the remote machine using remote ssh
+    conect to new host, out running ot the de-zoomcamp
 
- 🌱
+- Install Spark on The VM
+  create spark folder
+  download https://download.java.net/java/GA/jdk11/13/GPL/openjdk-11.0.1_linux-x64_bin.tar.gz
+
+  install java
+  export JAVA_HOME="${HOME}/spark/jdk-11.0.1"
+  export PATH="${JAVA_HOME}/bin:${PATH}"
+
+  install spark
+
+  export SPARK_HOME="${HOME}/spark/spark-3.0.3-bin-hadoop3.2"
+  export PATH="${SPARK_HOME}/bin:${PATH}"
+
+  Install pysaprk
+  export PYTHONPATH="${SPARK_HOME}/python/:$PYTHONPATH"
+  export PYTHONPATH="${SPARK_HOME}/python/lib/py4j-0.10.9-src.zip:$PYTHONPATH"
+
+  spark-shell to check if spark is wroing after installation
+
+  put all those export variable in your .bashrc file so that it automate this process once we start the vm
+
+- IF you satrt a new Vm and delete the old one 
+  run ssh-keygen -R35.245.25.41
+
+- Run spark file in jupyter notebook by forwarding the port in Vscode to the local port
+
+This journey promises to be exciting as I navigate through different tools and concepts in Data Engineering. Cheers to continuous learning and growth! 🌱
