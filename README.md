@@ -133,14 +133,16 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
 - dbt testing and documenation, all set in the yellow shcema.yml file
 
 ## Day 19
--  Creating VM isntance using sshs key gcreate gcp ssh key https://cloud.google.com/compute/docs/connect/create-ssh-keys
-    we will use instruction for linux in gitbash
-- Go to your pc home and create an ssh  directory or use cd .ssh/ to open the created directory
-- then go to metadata under seeting in compute engine and add the sshskey, after this then create the Vm machine
-- then go to local bash change to the pc home using (~), then connect to the system by uisng the folowing command
-- ssh -i ~/.ssh/gcpb sammygis@35.194.88.53 (external ip address of the VM)
+- Create VM istance using ssh key  get information from: https://cloud.google.com/compute/docs/connect/create-ssh-keys
+- Go to your linux or bash home on your pc home and create an ssh  directory or use cd  the command ``` mkdir .ssh/`` 
+- perfome what was gotten from the link in the first step
+- then go to metadata under setting in gcp compute engine and add the sshskey, copy the public activate ssh key created from follwowing the last step
+- Create a Virtual MAchine Instance
+- then go to local bash change to the pc home using ```cd ~```, then connect to the system by uisng the folowing command
+-  ```ssh -i ~/.ssh/gcpb sammygis@35.194.88.53``` (external ip address of the VM)
 - Install Anaconda on the WM
-- Create an easy activation config file that you can ssh into
+  Download anaconda for linux and use bash to install it
+- Create an easy activation config file that you can ssh into the isntances easily
 - Update linux - sudo apt-get update
 - Install docker - sudo apt install docker.io
     sudo groupadd docker
@@ -148,8 +150,8 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
     sudo service docker restart
 
     control D - this is used to logout of a VM to resphras or fo source .bashrc
-    Configure VS code to have access to the remote machine using remote ssh
-    conect to new host, out running ot the de-zoomcamp
+ - Configure VS code to have access to the remote machine using >remote-ssh ( this will only work when you enable and isntall the   remote-ssh extension)
+- conect to new host, and sellect the current host running on the pc
 
 - Install Spark on The VM
   create spark folder
@@ -173,8 +175,9 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
   put all those export variable in your .bashrc file so that it automate this process once we start the vm
 
 - IF you satrt a new Vm and delete the old one 
-  run ssh-keygen -R35.245.25.41
+  run ssh-keygen -R35.245.25.41 external IP of the new instances so that it can replace the last one
 
-- Run spark file in jupyter notebook by forwarding the port in Vscode to the local port
+- Run spark jupyter notebook on the terminal
+- forwarding the port in of the jupiter noteboook using vs code so that you can have access to the notebook locally
 
 This journey promises to be exciting as I navigate through different tools and concepts in Data Engineering. Cheers to continuous learning and growth! 🌱
