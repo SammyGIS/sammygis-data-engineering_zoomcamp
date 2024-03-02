@@ -189,6 +189,7 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
 - Patitioning and clusters of pyspark
 - Understanding pysaprk master UI
 - Spark DataFrame, loading the partitioned parquet file usng spark dataframe
-- lazy processing (transformation and actions in spark)
+- Transformation functions (laz processing): select, filter, groupby, joins, merge
+- Action: .show(), .head(). wrtie, take
 
 This journey promises to be exciting as I navigate through different tools and concepts in Data Engineering. Cheers to continuous learning and growth! 🌱
