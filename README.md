@@ -183,8 +183,10 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
 
 ## Day 19
 **Progress**
-- Loading data using pysapr-sql , building shema suing StuctField
-- Paattition and clusters of pyspartk
+- Loading data using pyspark-sql, building schema using spark-sqldatatypes
+- loading pandas dataframe into saprk dataframe
+- using Spark session to set core to be used by process
+- Patitioning and clusters of pyspark
 - Understanding pysaprk master UI
 - Spark DataFrame, loading the partitioned parquet file usng spark dataframe
 - lazy processing (transformation and actions in spark)
