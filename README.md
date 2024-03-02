@@ -133,6 +133,7 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
 - dbt testing and documenation, all set in the yellow shcema.yml file
 
 ## Day 19
+**Progress**
 - Create VM istance using ssh key  get information from: https://cloud.google.com/compute/docs/connect/create-ssh-keys
 - Go to your linux or bash home on your pc home and create an ssh  directory or use cd  the command ``` mkdir .ssh/`` 
 - perfome what was gotten from the link in the first step
@@ -179,5 +180,13 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
 
 - Run spark jupyter notebook on the terminal
 - forwarding the port in of the jupiter noteboook using vs code so that you can have access to the notebook locally
+
+## Day 19
+**Progress**
+- Loading data using pysapr-sql , building shema suing StuctField
+- Paattition and clusters of pyspartk
+- Understanding pysaprk master UI
+- Spark DataFrame, loading the partitioned parquet file usng spark dataframe
+- lazy processing (transformation and actions in spark)
 
 This journey promises to be exciting as I navigate through different tools and concepts in Data Engineering. Cheers to continuous learning and growth! 🌱
