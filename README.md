@@ -192,4 +192,25 @@ Initiating the course in 2023, challenges accessing Google Cloud Computing servi
 - Transformation functions (laz processing): select, filter, groupby, joins, merge
 - Action: .show(), .head(). wrtie, take
 
+## Day 20
+**Progress**
+- Understanding Kafka Anatomy:
+  - Learning about consumers, brokers, topics, producers, logging, and partitioning in Kafka.
+
+- Message Flow in Kafka:
+  - Understanding the process of how a consumer establishes connection with a Kafka broker, sends a message to it, and how the message flows through the log before reaching the producers.
+
+- Base Transformations with PySpark:
+  - Running basic transformations using PySpark and loading partitioned data into Google Cloud Storage.
+
+- Running Spark on Google Cloud:
+  - Utilizing Spark with Google Cloud Platform to load Parquet data directly.
+
+- Monitoring Spark Processes:
+  - Gaining insight into Spark processes by accessing the Spark Master UI for monitoring purposes.
+
+- Installing Hadoop Connector with gsutil:
+  - Utilizing gsutil to install the Hadoop connector and manage Spark context and configuration.
+
+
 This journey promises to be exciting as I navigate through different tools and concepts in Data Engineering. Cheers to continuous learning and growth! 🌱
