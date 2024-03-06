@@ -73,3 +73,6 @@ ssh-keygen -R 35.245.25.41
 ```
 
 These steps should help you create a VM instance and set it up for your tasks. Let me know if you need further assistance!
+
+
+gsutil cp gs://hadoop-lib/gcs/gcs-connector-hadoop3-2.2.5.jar gcs-connector-hadoop3-2.2.5.jar
