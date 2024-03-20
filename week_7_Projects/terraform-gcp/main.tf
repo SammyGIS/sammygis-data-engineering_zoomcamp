@@ -18,13 +18,13 @@ resource "google_service_account" "default" {
 
 resource "google_compute_instance" "default" {
   name         = "my-instance"
-  machine_type = "n2-standard-2"
+  machine_type = "e2-standard-2"
   zone         = "us-central1-a"
 
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-11"
+      image = "ubuntu 20.04 lts"
       labels = {
         my_label = "value"
       }
@@ -44,13 +44,9 @@ resource "google_compute_instance" "default" {
     }
   }
 
-  metadata = {
-    foo = "bar"
-  }
-
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-    email  = google_service_account.default.email
+    email  = "farm-watch-project@data-enginerring-zoomcamp.iam.gserviceaccount.com"
     scopes = ["cloud-platform"]
   }
 }
