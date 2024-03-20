@@ -19,14 +19,14 @@ resource "google_service_account" "default" {
 resource "google_compute_instance" "default" {
   name         = "my-instance"
   machine_type = "e2-standard-2"
-  zone         = "us-central1-a"
+  zone         = "us-east4-a"
 
 
   boot_disk {
     initialize_params {
       image = "ubuntu 20.04 lts"
       labels = {
-        my_label = "value"
+        my_label = "project"
       }
     }
   }
