@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("./key/data-enginerring-zoomcamp-b8719aa4a43e.json")
+  credentials = file("./keys/data-enginerring-zoomcamp-b8719aa4a43e.json")
 }
 
 resource "google_service_account" "default" {
