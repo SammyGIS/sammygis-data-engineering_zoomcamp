@@ -13,7 +13,7 @@ provider "google" {
 
 resource "google_service_account" "default" {
   account_id   = "my-custom-sa"
-  display_name = "Custom SA for VM Instance"
+  display_name = "sammy-gis"
 }
 
 resource "google_compute_instance" "default" {
@@ -21,7 +21,6 @@ resource "google_compute_instance" "default" {
   machine_type = "n2-standard-2"
   zone         = "us-central1-a"
 
-  tags = ["foo", "bar"]
 
   boot_disk {
     initialize_params {
@@ -48,8 +47,6 @@ resource "google_compute_instance" "default" {
   metadata = {
     foo = "bar"
   }
-
-  metadata_startup_script = "echo hi > /test.txt"
 
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
