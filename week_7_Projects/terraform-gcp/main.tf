@@ -51,11 +51,11 @@ resource "google_compute_instance" "default" {
 
 # bigquery
 resource "google_bigquery_dataset" "dataset" {
-  dataset_id                  = "example_dataset"
+  dataset_id                  = ""
   friendly_name               = "test"
   description                 = "This is a test description"
-  location                    = "EU"
-  default_table_expiration_ms = 3600000
+  location                    = "US"
+
 
   labels = {
     env = "default"
