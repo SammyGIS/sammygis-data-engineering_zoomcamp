@@ -27,7 +27,8 @@ resource "google_compute_instance" "default" {
 
   boot_disk {
     initialize_params {
-      image = "ubuntu-2004-lts" # Update image name to correct format
+      image = "ubuntu-2004-lts" 
+      size = 100
       labels = {
         my_label = "project"
       }
@@ -40,6 +41,8 @@ resource "google_compute_instance" "default" {
     access_config {
       # Ephemeral public IP
     }
+
+    metadata_startup_script = "${file("./install_docker.sh")}"
   }
 
   service_account {
@@ -49,29 +52,34 @@ resource "google_compute_instance" "default" {
   }
 }
 
+
 # bigquery
 resource "google_bigquery_dataset" "dataset" {
-  dataset_id                  = ""
-  friendly_name               = "test"
-  description                 = "This is a test description"
-  location                    = "US"
-
+  dataset_id = "sammy_project_dataset"
+  project    = "data-enginerring-zoomcamp"
+  location   = "US"
 
   labels = {
-    env = "default"
-  }
-
-  access {
-    role          = "OWNER"
-    user_by_email = google_service_account.bqowner.email
-  }
-
-  access {
-    role   = "READER"
-    domain = "hashicorp.com"
+    env = "project"
   }
 }
 
-resource "google_service_account" "bqowner" {
-  account_id = "bqowner"
+
+resource "google_storage_bucket" "bucket" {
+  name     = "sammy_project_bucket2024"
+  project  = "data-enginerring-zoomcamp"
+  location = "US"
 }
+
+resource "google_cloudfunctions_function" "function" {
+  name        = "gee_functions"
+  description = "My function"
+  project     = "data-enginerring-zoomcamp"
+  runtime     = "python3.7"
+
+  available_memory_mb   = 128
+  source_archive_bucket = sammy_project_bucket2024
+  trigger_http          = true
+  entry_point           = "helloGET"
+}
+
