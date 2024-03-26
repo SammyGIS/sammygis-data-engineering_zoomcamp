@@ -35,10 +35,10 @@ resource "google_compute_instance" "default" {
     access_config {
       # Ephemeral public IP
     }
-
-    metadata_startup_script = "${file("./install_docker.sh")}"
   }
 
+  metadata_startup_script = "${file("./install_docker.sh")}"
+  
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
     email  = "farm-watch-project@data-enginerring-zoomcamp.iam.gserviceaccount.com"
