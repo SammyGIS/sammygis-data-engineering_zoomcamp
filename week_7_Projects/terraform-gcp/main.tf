@@ -9,26 +9,20 @@ terraform {
 
 provider "google" {
   credentials = file("./keys/data-enginerring-zoomcamp-b8719aa4a43e.json")
-  project = "data-enginerring-zoomcamp"
-  region  = "us-east4"
+  project     = "data-enginerring-zoomcamp"
+  region      = "us-east4"
 }
-
-# resource "google_service_account" "default" {
-#   account_id   = "data-enginerring-zoomcamp"
-#   display_name = "de-zoomcamp-project"
-#   project      = "data-enginerring-zoomcamp" # Add your GCP project ID here
-# }
 
 resource "google_compute_instance" "default" {
   name         = "my-instance"
   machine_type = "e2-standard-4"
   zone         = "us-east4-a"
-  project      = "data-enginerring-zoomcamp" # Add your GCP project ID here
+  project      = "data-enginerring-zoomcamp"
 
   boot_disk {
     initialize_params {
-      image = "ubuntu-2004-lts" 
-      size = 100
+      image = "ubuntu-2004-lts"
+      size   = 100
       labels = {
         my_label = "project"
       }
@@ -52,34 +46,19 @@ resource "google_compute_instance" "default" {
   }
 }
 
-
-# bigquery
-resource "google_bigquery_dataset" "dataset" {
-  dataset_id = "sammy_project_dataset"
-  project    = "data-enginerring-zoomcamp"
-  location   = "US"
-
-  labels = {
-    env = "project"
-  }
-}
-
-
-resource "google_storage_bucket" "bucket" {
+resource "google_storage_bucket" "data_lake" {
   name     = "sammy_project_bucket2024"
   project  = "data-enginerring-zoomcamp"
   location = "US"
 }
 
 resource "google_cloudfunctions_function" "function" {
-  name        = "gee_functions"
-  description = "My function"
-  project     = "data-enginerring-zoomcamp"
-  runtime     = "python3.7"
-
-  available_memory_mb   = 128
-  source_archive_bucket = sammy_project_bucket2024
-  trigger_http          = true
-  entry_point           = "helloGET"
+  name                   = "gee_functions"
+  description            = "My function"
+  project                = "data-enginerring-zoomcamp"
+  runtime                 = "python39"
+  available_memory_mb     = 128
+  source_archive_bucket = google_storage_bucket.data_lake.name  # Reference the bucket resource
+  trigger_http           = true
+  entry_point            = "helloGET"
 }
-
