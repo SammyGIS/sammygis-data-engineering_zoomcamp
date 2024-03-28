@@ -52,7 +52,14 @@ resource "google_storage_bucket" "data_lake" {
   location = "US"
 }
 
-resource "google_cloudfunctions_function" "function" {
+
+resource "google_bigquery_dataset" "dataset" {
+  dataset_id = "my_first_dataset"
+  project    = "data-enginerring-zoomcamp"
+  location   = "US"
+}
+
+resource "google_cloudfunctions_function" "gee_functions" {
   name                   = "gee_functions"
   description            = "My function"
   project                = "data-enginerring-zoomcamp"
